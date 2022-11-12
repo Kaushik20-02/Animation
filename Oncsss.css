@@ -1,0 +1,235 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.csss{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.card{
+    width: 300px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    position: relative;
+}
+.card:hover{
+    width: 600px;
+}
+.card .circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card .circle::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--clr) ;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+.card:hover .circle::before{
+    clip-path: circle(400px at center);
+}
+.card .circle .coc_l{
+    position: relative;
+    transition: 0.5s;
+    width: 200px;
+}
+.card:hover .circle .coc_l{
+    transform: scale(0);
+}
+.content{
+    position: absolute;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.content h2{
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 40px;
+}
+.content p{
+    color: rgb(194, 186, 186);
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+.btn{
+    background: #fff;
+    border-radius: 20px;
+    padding: 12px;
+    color: #000106;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+}
+.btn:hover{
+    transform: scale(1.4);
+}
+.card .bot{
+    position: absolute;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translate(-50%,-50%) scale(0);
+}
+.card:hover .bot{
+    transform: translate(-50%,-50%) scale(1);
+    left: 80%;
+}
+
+
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #fbda61,#ff5acd);
+}
+.card2{
+    position: relative;
+    width: 350px;
+    height: 490px;
+    border-radius: 20px;
+    background: linen;
+    box-shadow: 0 35px 80px #918d8d;
+    transition: 0.5s;
+}
+.card2:hover{
+    height: 450px;
+}
+.p_img{
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    width: 150px;
+    height: 150px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    box-shadow: 0 15px 50px #919090;
+    overflow: hidden;
+}
+.p_img img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.card2:hover .p_img{
+    width: 250px;
+    height: 250px;
+}
+.content2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+.content2 .details{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+}
+.details2{
+    display: flex;
+    margin: 20px 0;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer{
+    width: 100%;
+}
+.content3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(189, 63, 90);
+    padding: 40px 40px;
+}
+.col{
+    position: relative;
+}
+.col h4::before {
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: rgb(105, 56, 83);
+    top: 35px;
+    left: 0;
+    position: absolute;
+}
+.col h4{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.col ul li{
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: darkgrey;
+}
+.col ul li:hover{
+    transform: translateX(50%);
+    color: rgb(231, 195, 195);
+    transform: scale(1.2);
+}
+.col .social a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:rgb(51, 34, 43) ;
+    text-align: center;
+    line-height: 40px;
+    color: floralwhite;
+    border-radius: 50%;
+    margin: 0 12px 12px 0;
+    transition: 0.5s;
+    margin-top: 50px;
+}
+.col .social a:hover{
+    transform: scale(1.2);
+    background-color: floralwhite;
+    color:fuchsia;
+}
